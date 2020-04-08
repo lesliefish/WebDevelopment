@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>第一个 JavaScript</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        function plus1(x) {
+            return x + 1;
+        }
+        console.log(plus1(66));
+
+        var arr = [];
+        arr.push(1, 2, 3, 4, 5, 6);
+        arr.reverse();
+        console.log(arr);
+
+
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        Point.prototype.r = function () {
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+        }
+
+
+        var ppp = new Point(6, 5);
+
+        console.log(ppp.r());
+
+    </script>
+
+</body>
+
+</html>
