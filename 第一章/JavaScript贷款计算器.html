@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JavaScript Loan Calculator
+    </title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!--
+        HTML表格
+    -->
+    <table>
+        <tr>
+            <th>输入贷款数据:</th>
+            <td></td>
+            <th>贷款余额,累计股本和利息支付</th>
+        </tr>
+        <tr>
+            <th>累计贷款</th>
+            <td><input id="amount" onchange="calculate();"></td>
+            <td rowspan="8"><canvas id="graph" width="400" height="250"></canvas></td>
+        </tr>
+        <tr>
+            <th>年利率</th>
+            <td><input id="apr" onchange="calculate();"></td>
+        </tr>
+        <tr>
+            <th>还款期限</th>
+            <td><input id="years" onchange="calculate();"></td>
+        </tr>
+        <tr>
+            <th>邮政编码</th>
+            <td><input id="zipcode" onchange="calculate();"></td>
+        </tr>
+        <tr>
+            <th>大约付款</th>
+            <td><button onclick="calculate();">计算</button></td>
+        </tr>
+        <!-- <tr>
+            <th>每月还款</th>
+            <td><input id="years" onchange="calculate();"></td>
+        </tr> -->
+    </table>
+</body>
+
+<script>
+    "use strict"
+</script>
+
+</html>
