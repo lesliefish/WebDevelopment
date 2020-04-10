@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>3.7不可变的原始值和可变的对象引用</title>
+</head>
+
+<body>
+
+    <script>
+
+        window.onload = function () {
+            var o = { x: 1 };
+            o.x = 2;
+            o.y = 3;
+            console.log(o.y);
+
+            var p = { x: 1 };
+            p.x = 2;
+            p.y = 3;
+
+            console.log(o === p);
+
+            var arr1 = [], arr2 = [];
+            console.log(arr1 === arr2); // 单独数组永远不等
+            console.log("equalArr:" + equalArr(arr1, arr2));
+
+            var arr = [1, 2, 3];
+            arr[3] = 4;// add value
+            console.log(arr[3]);
+            console.log(null === arr[4]);
+
+            var myArr = [];
+            var refA = myArr;
+            refA[0] = 5;
+            console.log(myArr[0]);
+            console.log(refA[0]);
+            console.log(refA == myArr);
+
+            var arrx = ['a', 'b', 'c'];
+            var arry = [];
+            for (var i = 0; i < arrx.length; i++) {
+                arry[i] = arrx[i];
+            }
+            console.log(arry);
+            console.log("equalArr:" + equalArr(arrx, arry));
+        }
+
+        function equalArr(arrA, arrB) {
+            if (arrA.length !== arrB.length) {
+                return false;
+            } else {
+                for (let index = 0; index < arrA.length; index++) {
+                    if (arrA[index] !== arrB[index]) {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
