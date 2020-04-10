@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>3.10.1函数作用域和声明提前</title>
+</head>
+
+<body>
+
+    <script>
+
+        window.onload = function () {
+            test(new String())
+        }
+
+        function test(params) {
+            var i = params;
+            if (typeof params == "object") {
+                var j = 0;
+                for (var index = 0; index < 4; index++) {
+                    console.log(index);
+                }
+                console.log(index);
+            }
+            console.log(j);
+        }
+    </script>
+</body>
+
+</html>
