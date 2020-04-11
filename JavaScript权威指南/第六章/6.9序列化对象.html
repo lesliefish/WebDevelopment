@@ -3,23 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>6.5 枚举属性.html</title>
+    <title>6.9序列化对象</title>
 </head>
 
 <body>
-
     <script>
 
         window.onload = function () {
-            var B = { x: 1, y: "22", z: 456 }
-            for(pro in B){
-                console.log(pro);
-            }
+            var o = { x: 1, y: { z: [false, null, ""] } };
+            s = JSON.stringify(o);
+            console.log(s);
+
+            p = JSON.parse(s);
+            console.log(p.x);
+            console.log(p.y.z);
         }
 
-        function test() {
-
-        }
     </script>
 </body>
 
