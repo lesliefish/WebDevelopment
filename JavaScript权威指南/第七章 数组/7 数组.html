@@ -11,13 +11,52 @@
 
         window.onload = function () {
             var o = { x: 1, y: { z: [false, null, ""] } };
-            var arr = [,,,,];
+            var arr = [, , null, undefined,];
             console.log(o.length);
             console.log(arr.length);
 
             arr.push("aa");
             console.log(arr.length);
             console.log(arr);
+
+            var keys = Object.keys(o);// 所有属性
+            console.log(keys);
+
+            // 跳过null undefined 和不存在的元素
+            for (let index = 0; index < arr.length; index++) {
+                if (!arr[index]) {
+                    continue;
+                }
+                console.log(arr[index]);
+            }
+
+            // 跳过undefined 和不存在的元素
+            for (let index = 0; index < arr.length; index++) {
+                if (arr[index] === undefined) {
+                    continue;
+                }
+                console.log(arr[index]);
+            }
+
+            // 跳过不存在的元素 处理存在的undefined
+            for (let index = 0; index < arr.length; index++) {
+                if (!(index in arr)) {
+                    continue;
+                }
+                console.log(arr[index]);
+            }
+
+            console.log("arr.join():" + arr.join());
+            console.log("arr.join(\"\"):" + arr.join(""));
+            console.log("arr.join(\"+\"):" + arr.join("+"));
+
+            console.log(arr.reverse().join());
+
+            var a = [1, 2, 3, 4, 5];
+            console.log(a.slice(3, -1));
+
+            console.log(a.splice(3));
+            console.log(a);
         }
 
     </script>
