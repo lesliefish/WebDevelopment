@@ -57,6 +57,24 @@
 
             console.log(a.splice(3));
             console.log(a);
+
+            console.log("a.toString():" + a.toString());
+            console.log("a.toLocaleString():" + a.toLocaleString());
+
+            // forEach
+            var sum = 0;
+            a.forEach(function (value) { sum += value });
+            console.log("sum:" + sum);
+
+            //map
+            console.log(a.map(function (x) { return x * x; }))
+
+            // filter
+            console.log(a.filter(function (x) { return x >= 2; }))
+
+            //every
+            console.log(a.every(function (x) { return x >= 1; }))
+            console.log(a.some(function (x) { return x == 1; }))
         }
 
     </script>
