@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>函数</title>
+</head>
+
+<body>
+    <script>
+
+        function addPrivateProperty(o, name, predicate) {
+            console.log(arguments.length);
+            var value;
+            o["get" + name] = function () {
+                return value;
+            };
+
+            o["set" + name] = function (v) {
+                if (predicate && !predicate(v)) {
+                    throw Error("set" + name + ": invalid value ") + v;
+                } else {
+                    value = v;
+                };
+            };
+        }
+
+        window.onload = function () {
+            var o = {};
+            addPrivateProperty(o, "Name", function (x) { return typeof x == "string" });
+            o.setName("Frank");
+            console.log(o.getName());
+            o.setName("lesliefish");
+            console.log(o.getName());
+        }
+
+    </script>
+</body>
+
+</html>
