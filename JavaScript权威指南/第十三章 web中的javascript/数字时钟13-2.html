@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta c数字时钟</title>
+    <style>
+        #clock {
+            font: bold 24pt monaco;
+            background: #ddf;
+            padding: 10px;
+            border: solid black 2px;
+            border-radius: 10px;
+        }
+
+        .reveal *.handle {
+            display: block;
+        }
+    </style>
+
+    <script>
+
+        function displayTime() {
+            var elt = document.getElementById("clock");
+            var now = new Date();
+            elt.innerHTML = now.toLocaleTimeString();
+            setTimeout(displayTime, 1000);
+        }
+
+        window.onload = function () {
+            displayTime();
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>数字时钟</h1>
+    <span id="clock"></span>
+</body>
+
+</html>
