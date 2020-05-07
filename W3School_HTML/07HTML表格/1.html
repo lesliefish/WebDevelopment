@@ -1,0 +1,319 @@
+<html>
+
+<body style="background-color:lightblue">
+    <hr />
+    <p>没边框的表格</p>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <hr color="black" />
+
+    <p>表格中的表头</p>
+    <h4>水平表头</h4>
+    <table border="1">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>lesliefish</td>
+            <td>21</td>
+        </tr>
+    </table>
+
+    <h4>垂直表头</h4>
+    <table border="1">
+        <tr>
+            <th>姓名</th>
+            <td>lesliefish</td>
+        </tr>
+        <tr>
+            <th>年龄</th>
+            <td>21</td>
+        </tr>
+    </table>
+
+
+    <hr color="black" />
+
+    <p>空单元格</p>
+    <table border="1">
+        <tr>
+            <td>Some text</td>
+            <td>Some text</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Some text</td>
+        </tr>
+    </table>
+
+    <hr color="black" />
+
+    <p>带有标题的表格</p>
+    <table border="6">
+        <caption>这是标题</caption>
+        <tr>
+            <td>12</td>
+            <td>12 text</td>
+        </tr>
+        <tr>
+            <td>1231</td>
+            <td>Some 3223</td>
+        </tr>
+    </table>
+
+    <hr color="black" />
+
+    <p>跨行或跨列的表格单元格</p>
+    <h4>跨行</h4>
+    <table border="6">
+        <tr>
+            <th>姓名</th>
+            <th colspan="2">电话</th>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>555 77 854</td>
+            <td>555 77 855</td>
+        </tr>
+    </table>
+
+    <h4>跨列</h4>
+    <table border="6">
+        <tr>
+            <th>姓名</th>
+            <td>lesliefish</th>
+        </tr>
+        <tr>
+            <th rowspan="2">电话</th>
+            <td>555 77 854</td>
+        </tr>
+        <tr>
+            <td>555 77 855</td>
+        </tr>
+    </table>
+
+    <hr color="black" />
+
+    <p>表格内的标签</p>
+    <table border="1">
+        <tr>
+            <td>
+                <p>这是一个段落。</p>
+                <p>这是另一个段落。</p>
+            </td>
+            <td>这个单元包含一个表格：
+                <table border="1">
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>D</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>这个单元包含一个列表：
+                <ul>
+                    <li>苹果</li>
+                    <li>香蕉</li>
+                    <li>菠萝</li>
+                </ul>
+            </td>
+            <td>HELLO</td>
+        </tr>
+    </table>
+
+
+    <hr color="black" />
+
+    <p>单元格边距</p>
+    <h4>没有 cellpadding：</h4>
+    <table border="1">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table>
+
+    <h4>带有 cellpadding：</h4>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table>
+
+    <hr color="black" />
+
+    <p>单元格间距</p>
+    <h4>没有 cellspacing:</h4>
+    <table border="1">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table>
+
+    <h4>带有 cellspacing:</h4>
+    <table border="1" cellspacing="10">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table>
+
+
+    <hr color="black" />
+
+    <p>向表格添加背景颜色或背景图像</p>
+    <h4>背景颜色：</h4>
+    <table border="1" bgcolor="lightgreen">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table>
+
+    <h4>背景图像：</h4>
+    <table border="1" background="bg.png">
+        <tr>
+            <td>First</td>
+            <td>Row</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>Row</td>
+        </tr>
+    </table>
+
+
+    <hr color="black" />
+
+    <p>在表格单元中排列内容</p>
+
+    <table width="400" border="1">
+        <tr>
+            <th align="left">消费项目....</th>
+            <th align="right">一月</th>
+            <th align="right">二月</th>
+        </tr>
+        <tr>
+            <td align="left">衣服</td>
+            <td align="right">$241.10</td>
+            <td align="right">$50.20</td>
+        </tr>
+        <tr>
+            <td align="left">化妆品</td>
+            <td align="right">$30.00</td>
+            <td align="right">$44.45</td>
+        </tr>
+        <tr>
+            <td align="left">食物</td>
+            <td align="right">$730.40</td>
+            <td align="right">$650.00</td>
+        </tr>
+        <tr>
+            <th align="left">总计</th>
+            <th align="right">$1001.50</th>
+            <th align="right">$744.65</th>
+        </tr>
+    </table>
+
+    <hr color="black" />
+
+    <p>框架(frame)属性</p>
+    <p>Table with frame="box":</p>
+    <table frame="box">
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+
+    <p>Table with frame="above":</p>
+    <table frame="above">
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+
+    <p>Table with frame="below":</p>
+    <table frame="below">
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+
+    <p>Table with frame="hsides":</p>
+    <table frame="hsides">
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+
+    <p>Table with frame="vsides":</p>
+    <table frame="vsides">
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+</body>
+
+</html>
