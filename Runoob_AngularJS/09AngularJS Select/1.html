@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <select ng-init="selectedName = names[0]" ng-model="selectedName" ng-options="x for x in names">
+        </select>
+
+        <select>
+            <option ng-repeat="x in names">{{x}}</option>
+        </select>
+
+        <p>选择网站:</p>
+        <select ng-init="selectedSite = sites[0]" ng-model="selectedSite" ng-options="x.site for x in sites">
+        </select>
+
+        <h1>你选择的是: {{selectedSite.site}}</h1>
+        <p>网址为: {{selectedSite.url}}</p>
+
+        <p>选择一辆车:</p>
+
+        <select ng-init="selectedCar = cars.car01" ng-model="selectedCar"
+            ng-options="y.brand for (x, y) in cars"></select>
+        <p>你选择的是: {{selectedCar.brand}}</p>
+        <p>型号为: {{selectedCar.model}}</p>
+        <p>颜色为: {{selectedCar.color}}</p>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.names = ["Google", "Runoob", "Taobao"];
+            $scope.sites = [
+                { site: "Google", url: "http://www.google.com" },
+                { site: "Runoob", url: "http://www.runoob.com" },
+                { site: "Taobao", url: "http://www.taobao.com" }
+            ];
+            $scope.cars = {
+                car01: { brand: "Ford", model: "Mustang", color: "red" },
+                car02: { brand: "Fiat", model: "500", color: "white" },
+                car03: { brand: "Volvo", model: "XC90", color: "black" }
+            }
+        });
+    </script>
+
+    <p>该实例演示了 ng-options 指令的使用。</p>
+
+</body>
+
+</html>
