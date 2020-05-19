@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <body>
+    Hello World!
+    <script src="../../lib/angular-1.4.6/angular.min.js"></script>
+    <script>
+       angular.element(document).ready(function() {
+         console.log("init");
+         angular.module('myApp', []);
+         angular.bootstrap(document, ['myApp']);
+       });
+    </script>
+  </body>
+</html>

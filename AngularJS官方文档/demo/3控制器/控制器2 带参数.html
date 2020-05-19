@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="spicyApp2">
+
+<head>
+    <script src="../../lib/angular-1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="spicyApp2" ng-controller="SpicyCtrl">
+        <input ng-model="customSpice">
+        <button ng-click="spicy('chili')">Chili</button>
+        <button ng-click="spicy(customSpice)">Custom spice</button>
+        <p>The food is {{spice}} spicy!</p>
+    </div>
+
+    <script>
+        var myApp = angular.module("spicyApp2", []);
+        myApp.controller("SpicyCtrl", ["$scope", function ($scope) {
+            $scope.customSpice = "very";
+
+            $scope.spicy = function (param) {
+                $scope.spice = param;
+            };
+        }]);
+    </script>
+
+</body>
+
+</html>
