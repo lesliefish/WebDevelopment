@@ -1,2 +1,2 @@
-# GettingStartedWithJavaScript
-JavaScript权威指南学习
+# Web开发
+从C++转向web开发之路
