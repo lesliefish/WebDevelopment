@@ -1,6 +1,6 @@
 "use strict";
-var jichuyufa;
-(function (jichuyufa) {
+var basicgrammar;
+(function (basicgrammar) {
     var Site = /** @class */ (function () {
         function Site() {
         }
@@ -11,4 +11,4 @@ var jichuyufa;
     }());
     var obj = new Site();
     obj.name();
-})(jichuyufa || (jichuyufa = {}));
+})(basicgrammar || (basicgrammar = {}));
