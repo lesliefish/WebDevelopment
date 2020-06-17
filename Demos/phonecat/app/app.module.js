@@ -4,7 +4,7 @@
 angular.module('phonecatApp', [
   'ngAnimate',
   'ngRoute',
-  //'core',
+  'core',
   // 'phoneDetail',
-  // 'phoneList'
+  'phoneList'
 ]);
