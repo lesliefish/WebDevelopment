@@ -6,7 +6,7 @@
 
 <ul class="phone-thumbs">
     <li ng-repeat="img in phone.images">
-        <img ng-src="{{img}}">
+        <img ng-src="{{img}}" ng-click="setImage(img)">
     </li>
 </ul>
 
@@ -18,9 +18,15 @@
             <dd ng-repeat="availability in phone.availability">{{availability}}</dd>
         </dl>
     </li>
-    ...
     </li>
     <span>Additional Features</span>
     <dd>{{phone.additionalFeatures}}</dd>
     </li>
+
+    <dl>
+        <dt>Infrared</dt>
+        <dd>{{phone.connectivity.infrared | checkmark}}</dd>
+        <dt>GPS</dt>
+        <dd>{{phone.connectivity.gps | checkmark}}</dd>
+    </dl>
 </ul>
