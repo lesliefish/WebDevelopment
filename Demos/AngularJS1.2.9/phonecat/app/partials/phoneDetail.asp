@@ -1,4 +1,4 @@
-<img ng-src="{{phone.images[0]}}" class="phone">
+<img ng-src="{{mainImageUrl}}" class="phone">
 
 <h1>{{phone.name}}</h1>
 
