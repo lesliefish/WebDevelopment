@@ -9,3 +9,6 @@ npm install -g @vue/cli
 
 检查安装是否成功
 vue --version
+
+拷贝文件夹后安装依赖
+npm i
