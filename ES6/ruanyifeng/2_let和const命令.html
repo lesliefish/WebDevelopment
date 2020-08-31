@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {
+            let a = 10;
+            var b = 1;
+        }
+
+        {
+            let array = [1, 2, 3, , 4, 5, 6,];
+            for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+                console.log(element);
+            }
+        }
+
+        {
+            // var 的情况
+            console.log(foo); // 输出undefined
+            var foo = 2;
+
+            // let 的情况
+            /////////console.log(bar); // 报错ReferenceError
+            let bar = 2;
+        }
+
+        function func(arg) {
+            { let arg; }
+        }
+        func()
+
+        function func(arg) {
+            {
+                let arg;
+            }
+        }
+        func() // 不报错
+    </script>
+</body>
+
+</html>
