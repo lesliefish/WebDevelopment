@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的解构赋值</title>
+</head>
+
+<body>
+    <script>
+        {
+            let [a, b, c] = [1, 2, 3];
+            console.log(a);
+        }
+
+        {
+            let [x, y, z] = new Set(['a', 'b', 'c']);
+            console.log(`let [x, y, z] = new Set(['a', 'b', 'c']); ` + x);
+
+        }
+
+        {
+            let { foo, bar } = {
+                foo: {
+                    'a': 10
+                }, bar: 'bbb'
+            };
+            console.log(`let { foo, bar } = { foo: 'aaa', bar: 'bbb' }  ` + foo.a);
+        }
+
+        {
+            const [a, b, c, d, e] = 'hello';
+            console.log(a, b, c, d, e);
+        }
+
+        {
+            // 用途
+            // 交换变量
+            {
+                let a = 2;
+                let b = 3;
+                console.log(`let [a, b] = [2, 3];`, a, b);
+                [a, b] = [b, a];
+                console.log(`let [a, b] = [2, 3];`, a, b);
+            }
+
+            {
+                // 返回一个数组
+
+                function example() {
+                    return [1, 2, 3];
+                }
+                let [a, b, c] = example();
+
+                console.log('let [a, b, c] = example();', a, b, c);
+            }
+
+            {
+                // 返回一个对象
+
+                function example() {
+                    return {
+                        foo: 1111,
+                        bar: 2
+                    };
+                }
+                let { foo, bar } = example();
+                console.log('let { foo, bar } = example();', foo, bar);
+            }
+
+            {
+                //提取 JSON 数据
+                let jsonData = {
+                    id: 42,
+                    status: "OK",
+                    data: [867, 5309]
+                };
+
+                let { id, status, data: number } = jsonData;
+
+                console.log(id, status, number);
+            }
+
+            {
+                const map = new Map();
+                map.set('first', 'hello');
+                map.set('second', 'world');
+
+                for (let [key, value] of map) {
+                    console.log(key + " is " + value);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
