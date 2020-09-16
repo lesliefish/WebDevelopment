@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数值的扩展</title>
+</head>
+
+<body>
+    <script>
+        {
+            console.log(0b111110111 === 503);
+            console.log(0o767 === 503) // true
+            let iValue = Number('0b11110111');
+            console.log(iValue);
+
+            let a = Number('a11');
+            console.log(Number.isNaN(a));
+        }
+
+        {
+            // ES5的写法
+            parseInt('12.34') // 12
+            parseFloat('123.45#') // 123.45
+
+            // ES6的写法
+            Number.parseInt('12.34') // 12
+            Number.parseFloat('123.45#') // 123.45
+
+            Number.isSafeInteger(11111111111111111111111111111111111);
+        }
+
+        {
+            // math对象的扩展
+            console.log(4 === Math.trunc(4.1))
+        }
+
+        {
+            Math.hypot(3, 4);        // 5
+            Math.hypot(3, 4, 5);     // 7.0710678118654755
+            Math.hypot();            // 0
+            Math.hypot(NaN);         // NaN
+            Math.hypot(3, 4, 'foo'); // NaN
+            Math.hypot(3, 4, '5');   // 7.0710678118654755
+            Math.hypot(-3);          // 3
+        }
+
+        {
+            //指数运算符
+            console.log('指数运算符')
+            console.log(2 ** 9);
+        }
+    </script>
+</body>
+
+</html>
