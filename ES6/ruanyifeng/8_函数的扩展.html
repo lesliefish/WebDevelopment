@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数的扩展</title>
+</head>
+
+<body>
+
+    <script>
+        {
+            console.log('函数默认值')
+            function log(x, y = 10) {
+                console.log(y);
+                console.log(x);
+            }
+            log();
+            //使用参数默认值时，函数不能有同名参数。
+        }
+
+        {
+            // 应用
+            function throwIfMissing() {
+                //throw new Error('Missing parameter');
+            }
+
+            function foo(mustBeProvided = throwIfMissing()) {
+                return mustBeProvided;
+            }
+
+            foo();
+        }
+
+        {
+            // rest参数
+            console.log('rest');
+            function add(...values) {
+                let sum = 0;
+                for (const iterator of values) {
+                    sum += iterator;
+                }
+                return sum;
+            }
+
+            console.log(add(2, 3, 5));
+
+            function push(array, ...items) {
+                items.forEach(function (item) {
+                    array.push(item);
+                    console.log(item);
+                });
+            }
+
+            var a = [];
+            push(a, 1, 2, 3)
+            console.log(a);
+        }
+
+        {
+            //箭头参数
+            console.log("箭头参数");
+            let f = v => v;
+            let sum = (n1, n2) => n1 + n2;
+            console.log(sum(2, 1));
+
+            let test = [1, 2, 3].map(x => x * x);
+            console.log(test);
+
+
+            function foo() {
+                setTimeout(() => {
+                    console.log('id:', this.id);
+                }, 10);
+            }
+
+            var id = 21;
+
+            foo.call({ id: 42 });
+            // id: 42
+        }
+        {
+            // toString
+            console.log('toString');
+            let f =/*注释*/ v => { a, 5 };
+            console.log(f.toString());
+
+            let f2 = function /*ssss*/name(params) {
+
+            }
+            console.log(f2.toString());
+
+        }
+    </script>
+</body>
+
+</html>
