@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的扩展</title>
+</head>
+
+<body style="background-color: black;">
+    <script>
+        {
+            console.log(...[1, 2, 3])
+            console.log(1, ...[2, 3, 4], 5)
+
+            function add(x, y) {
+                return x + y;
+            }
+
+            let nums = [10, 2];
+            console.log(add(...nums));
+
+            function f(v, w, x, y, z) { console.log(v, w, x, y, z); }
+            const args = [0, 1];
+            f(-1, ...args, 2, ...[3]);
+        }
+
+        {
+            // ES5 的写法
+            function f(x, y, z) {
+                // ...
+            }
+            var args1 = [0, 1, 2];
+            f.apply(null, args1);
+
+            // ES6的写法
+            function f(x, y, z) {
+                // ...
+            }
+            let args = [0, 1, 2];
+            f(...args);
+        }
+
+
+        {
+            console.log('扩展运算符的使用');
+            const a1 = [1, 2];
+            const a2 = a1.concat();
+
+            a2[0] = 2;
+            a1 // [2, 2]
+            console.log(a1);
+            console.log(a2);
+        }
+
+
+        {
+            const a1 = [1, 2];
+            // 写法一
+            const a2 = [...a1];
+            // 写法二
+            const [...a3] = a1;
+            a2[1] = 5;
+            a3[1] = 50;
+
+            console.log(a1);
+            console.log(a2);
+            console.log(a3);
+        }
+
+
+        {
+            console.log('合并数组');
+            const arr1 = ['a', 'b'];
+            const arr2 = ['c'];
+            const arr3 = ['d', 'e'];
+
+            // ES5 的合并数组
+            console.log(arr1.concat(arr2, arr3));
+            // [ 'a', 'b', 'c', 'd', 'e' ]
+
+            // ES6 的合并数组
+            console.log([...arr1, ...arr2, ...arr3]);
+
+            // [ 'a', 'b', 'c', 'd', 'e' ]
+        }
+
+        {
+            console.log('字符串');
+            console.log([...'hello']);
+
+            let arrayLike = {
+                '0': 'a',
+                '1': 'b',
+                '2': 'c',
+                length: 3
+            };
+
+            console.log(arrayLike);
+            // TypeError: Cannot spread non-iterable object.
+            //let arr = [...arrayLike];
+        }
+
+
+
+    </script>
+</body>
+
+</html>
