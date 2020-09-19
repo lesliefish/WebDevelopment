@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的扩展</title>
+</head>
+
+<body>
+    <script>
+        {
+            console.log('Array.from()');
+            let arrayLike = {
+                '0': 'a',
+                '1': 'b',
+                '2': 'c',
+                length: 3
+            };
+            let arr = Array.from(arrayLike)
+            console.log(arr);
+
+            let namesSet = new Set(['a', 'b'])
+            let arrNamesSet = Array.from(namesSet) // ['a', 'b']
+
+            console.log(namesSet);
+            console.log(arrNamesSet);
+
+        }
+
+        {
+            console.log('Array.of()');
+            console.log(Array.of());
+            console.log(Array.of(undefined));
+            console.log(Array.of(1));
+            console.log(Array.of(1, 2));
+        }
+
+        {
+            console.log('copyWithin()');
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            let arrAfter = arr.copyWithin(4, 0);
+
+            console.log(arr);
+            console.log(arrAfter);
+        }
+    </script>
+</body>
+
+</html>

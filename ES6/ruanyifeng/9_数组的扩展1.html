@@ -92,9 +92,11 @@
                 '0': 'a',
                 '1': 'b',
                 '2': 'c',
-                length: 3
+                length: 40
             };
 
+            let arr1 = [].slice.call(arrayLike); // ['a', 'b', 'c']
+            console.log(arr1);
             console.log(arrayLike);
             // TypeError: Cannot spread non-iterable object.
             //let arr = [...arrayLike];
