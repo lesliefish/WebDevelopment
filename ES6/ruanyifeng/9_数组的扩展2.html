@@ -56,6 +56,45 @@
             }));
         }
 
+        {
+            //
+            console.log('fill ......................');
+
+            console.log([, , , , , , , , , , , , , , ,].fill(1));
+            console.log(new Array(10).fill(1));
+        }
+
+        {
+            console.log('entries()，keys()和values()');
+
+            let arr = [3, 4, 34, 34, 3434, 34, 34, 34, 34, 34, 4];
+            for (let index of arr.keys()) {
+                console.log(index);
+            }
+            let arr2 = new Array(10).fill({ name: 'yu', value: 'v' });
+            for (let index of arr2.keys()) {
+                console.log(index);
+            }
+
+            for (let ele of arr2.values()) {
+                console.log(ele);
+            }
+
+            for (let [index, elem] of arr2.entries()) {
+                console.log(index, elem);
+            }
+        }
+
+
+        {
+            console.log('flat ......................');
+
+            let arr1 = [1, 2, 32, 3, [1, 2, 3, 33, [12, 3]]];
+            console.log(arr1.flat(2));
+
+            let arr2 = [1, 2, 3, 4, 5, 6];
+            console.log(arr2.flatMap(x => [x * x * x]));
+        }
     </script>
 </body>
 
