@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class的基本语法</title>
+</head>
+
+<body>
+    <script>
+        {
+            console.log('class basic test ...');
+
+            class Point {
+                constructor(x, y) {
+                    this.x = x;
+                    this.y = y;
+                }
+
+                toString() {
+                    return '(' + this.x + ',' + this.y + ')';
+                }
+            }
+
+            let p1 = new Point(1, 4);
+            console.log(p1.toString());
+
+            let p2 = new Point(111, 4333);
+            console.log(p2.toString());
+        }
+
+        {
+            console.log('getter and setter ..........');
+
+            class User {
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+
+                    console.log(this.name, this.age);
+                }
+
+                get nameV() {
+                    console.log('name getter', this.name);
+                    return this.name;
+                }
+
+                set nameV(v) {
+                    console.log('name setter', this.name);
+                    this.name = v;
+                }
+
+                get ageV() {
+                    console.log('age getter', this.age);
+                    return this.age;
+                }
+
+                set ageV(v) {
+                    console.log('age setter', this.age);
+                    this.age = v;
+                }
+            }
+
+
+            let user1 = new User('leslie', 18);
+            user1.nameV = 'leslieeeee';
+            user1.ageV = 38;
+            console.log(user1.nameV);
+
+            let user2 = new User('fish', 11);
+            user2.nameV = 'fishieeeee';
+            user2.ageV = 36;
+            console.log(user2.nameV);
+        }
+
+        {
+            console.log('static method........');
+
+            class Test {
+                constructor() {
+                    this.v = 100;
+                }
+
+                static print() {
+                    console.log('print..........');
+                    return 'static print'
+                }
+            }
+
+            let test = new Test();
+            console.log(test.v);
+
+            console.log(Test.print());
+        }
+
+    </script>
+</body>
+
+</html>
