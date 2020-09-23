@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async函数</title>
+</head>
+
+<body>
+    <script>
+        {
+            //
+            async function sayHello() {
+                console.log('hello');
+
+                return 'it is a async test string'
+            }
+
+            console.log(sayHello());
+            sayHello().then(v => {
+                console.log(v);
+            })
+        }
+
+        {
+            console.log('await..................');
+
+            function timeout(ms) {
+                return new Promise((resolve) => {
+                    setTimeout(resolve, ms);
+                });
+            }
+
+            async function asyncPrint(value, ms) {
+                await timeout(ms);
+                console.log(value);
+            }
+
+            asyncPrint('hello world', 500);
+            asyncPrint('hello world1', 50);
+        }
+    </script>
+</body>
+
+</html>
