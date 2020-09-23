@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise对象</title>
+</head>
+
+<body>
+    <script>
+        {
+            //
+            console.log('基本用法');
+            let promise = new Promise(function (resolve, reject) {
+                if (1) {
+                    for (let index = 0; index < 10000; index++) {
+                        let element = index;
+                        element += index;
+                    }
+                    resolve(1);
+                    console.log('aaaa');
+                } else {
+                    reject(1);
+                }
+            })
+            console.log('aaa');
+        }
+
+        {
+            console.log('then....................');
+            let promise = new Promise(function (resolve, reject) {
+                console.log('Promise');
+                resolve();
+            });
+
+            promise.then(function () {
+                console.log('resolved.');
+            });
+
+            console.log('Hi!');
+        }
+
+        {
+            console.log('Ajax.........');
+
+            const getJson = function (url) {
+                const promise = new Promise(function (resolve, reject) {
+                    const handler = function () {
+                        if (this.status === 200) {
+                            resolve(this.statusText)
+                        } else {
+                            reject('error');
+                        }
+                    };
+
+                    const client = new XMLHttpRequest();
+                    client.open('GET', url);
+                    client.onreadystatechange = handler;
+                    client.responseType = "json";
+                    client.setRequestHeader("Accept", "application/json");
+                    client.send();
+                })
+
+                return promise;
+            }
+            getJson("data.json").then(function (json) {
+                console.log('Contents: ' + json);
+            }, function (error) {
+                console.error('出错了', error);
+            });
+        }
+    </script>
+</body>
+
+</html>
