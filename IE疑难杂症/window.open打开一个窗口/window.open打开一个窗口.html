@@ -1,0 +1,19 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页面</title>
+</head>
+
+<body>
+    <button id="btn">打开</button>
+    <script>
+        var anotherWindow = undefined;
+        document.getElementById('btn').onclick = function () {
+            anotherWindow = window.open("/IE疑难杂症/window.open打开一个窗口/another.html", "another", "location=no");
+            anotherWindow.focus();
+        }
+    </script>
+</body>
+</html>
