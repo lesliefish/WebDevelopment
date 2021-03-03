@@ -1,0 +1,14 @@
+html, body {
+    margin: 5px;
+    padding: 0;
+    font-size: 14px;
+}
+
+div {
+    margin: auto;
+}
+
+.line {
+    height: 1px;
+    border-top: 1px solid #cccccc;
+}
