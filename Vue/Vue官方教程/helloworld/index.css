@@ -9,6 +9,10 @@ div {
 }
 
 .line {
-    height: 1px;
+    height: 40px;
     border-top: 1px solid #cccccc;
+}
+
+.redDiv {
+    background-color: lightcoral;
 }

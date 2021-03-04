@@ -35,7 +35,21 @@
         <div>
             <button v-on:click="onClick">12345，上山打老虎</button>
         </div>
+
+        <div class="line"></div>
+        <div>
+            <input type="text" v-model="inputData">
+        </div>
+
+        <div class="line"></div>
+            <c-item v-for="item in groceryList" v-bind:something="item" v-bind:key="item.id"></c-item>
+
+
+
     </div>
+
+
+
     <script src="index.js"></script>
 </body>
 
