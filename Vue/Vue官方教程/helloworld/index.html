@@ -42,9 +42,11 @@
         </div>
 
         <div class="line"></div>
-            <c-item v-for="item in groceryList" v-bind:something="item" v-bind:key="item.id"></c-item>
+        <c-item v-for="item in groceryList" v-bind:something="item" v-bind:key="item.id"></c-item>
 
 
+        <div class="line"></div>
+        <div v-bind:id="bindId">{{message}}</div>
 
     </div>
 
