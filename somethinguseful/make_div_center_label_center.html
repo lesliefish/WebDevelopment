@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            position: absolute;
+            left: 25%;
+            top: 25%;
+
+            /*以下用于label居中*/ 
+            align-items: center;
+            justify-content: center;
+            display: flex;/*兼容IE*/
+            display: -webkit-flex;
+        }
+
+        label {
+            font-size: 9px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+            <label>你好</label>
+        </div>
+    </div>
+</body>
+
+</html>
