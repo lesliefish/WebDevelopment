@@ -1,5 +1,0 @@
-Auto Rename Tag:自动更改结束标签
-Liver Server:自动搭建本地服务器
-Prettier : code formatter 代码美化
-Vetur: Vue组件格式支持
-vscode-icons：美化文件图标
